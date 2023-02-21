@@ -1,0 +1,32 @@
+Cloud9:
+
+		# For Linux, py 3.8 installation:
+		
+									sudo amazon-linux-extras install python3.8
+		
+		# For Pip installation:
+							
+									curl -O https://bootstrap.pypa.io/get-pip.py
+									
+									python3.8 get-pip.py --user
+		# make directory:	
+										
+									mkdir python
+						
+		# psycopg2 installation:
+		
+									sudo python3.8 -m pip install psycopg2-binary
+		
+		# To create that files as zip:
+		
+									zip -r layer.zip python
+									
+		# Here we can download that zip file through right click & crete layer manually
+		
+		otherwise
+		
+		# Directly we can create the layer with this zip file 
+		
+												aws lambda publish-layer-version --layer-name psyco-layer --zip-file fileb://layer.zip --compatible-runtimes python3.8 --region ap-northeast-1
+												
+												............................................. <later name our wish> ......... <zip file name> ............................ <region> <we have to mention which is our already created instance region>
