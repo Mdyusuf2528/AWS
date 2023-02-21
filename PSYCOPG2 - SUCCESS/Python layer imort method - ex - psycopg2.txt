@@ -15,7 +15,7 @@ Cloud9:
 						
 		# psycopg2 installation:
 		
-									sudo python3.8 -m pip install psycopg2-binary
+									sudo python3.8 -m pip install psycopg2-binary -t python/
 		
 		# To create that files as zip:
 		
